@@ -6,9 +6,16 @@ def IndexView(request):
     profile = ProfileModel.objects.all()
     summary = SummaryModel.objects.all()
     skills = SkillModel.objects.all()
+    projects = ProjectModel.objects.all()
     context = {
         "profile": profile,
         "summary": summary,
-        "skills": skills
+        "skills": skills,
+        "projects": projects
     }
     return render(request, "index.html", context)
+
+
+
+def ProjectsView(request):
+    return render(request, "projects.html")

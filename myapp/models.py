@@ -25,8 +25,8 @@ class SkillModel(models.Model):
 
 class ProjectModel(models.Model):
     project_name = models.CharField(max_length=50)
-    priject_image = models.ImageField()
-    tech_stack = models.CharField(max_length=25)
+    project_image = models.ImageField()
+    tech_stack = models.CharField(max_length=250)
     project_desc = models.TextField()
     github_url = models.URLField()
 
