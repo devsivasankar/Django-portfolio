@@ -15,6 +15,8 @@
     <!-- script -->
     <script src="{% static 'script.js' %}"></script>
     <!-- favicon -->
+    <!-- aclonica  -->
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 </head>
 <body>
     <div class="container">
@@ -41,7 +43,7 @@
         <!-- summery section  -->
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <h1 class="name">Sivasankar k</h1>
+                <h1 class="name">Sivasankar</h1>
                 <h6 class="proffesion">Full-Stack Web Developer</h6>
 
                {% for summ in summary %}
@@ -49,7 +51,7 @@
                {% endfor %}
 
                <div class="social">
-                    <a href="#" class="resume">Resume <i class="fa-solid fa-paper-plane"></i></a>
+                    <a href="{% static 'resume/resume.pdf' %}" class="resume" download>Resume <i class="fa-solid fa-paper-plane"></i></a>
                     <span class="email"><i class="fa-solid fa-envelope"></i></span>
                     <span class="whatsapp"><i class="fa-brands fa-whatsapp"></i></span>
                     <span class="linkedin"><i class="fa-brands fa-linkedin-in"></i></span>
@@ -64,7 +66,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <h1 class="about-heading mb-4 pb-2">About Me.</h1>
-                        <p class="about-desc mb-5">My Name is Sivasankar, a former Junior Engineer in Automobile Industry with 6 years of experience, now passionately pursuing software development. I specialize in full-stack technologies including HTML, CSS, Bootstrap, JavaScript, Python, MySQL, Django, and data analysis with NumPy and Pandas. Then i Did Lots of Projects!! Checkit Out <a href=""><i class="fa-brands fa-github"></i></a> on Here.</p>
+                        <p class="about-desc mb-5">My Name is Sivasankar, a former Junior Engineer in Automobile Industry with 6 years of experience, now passionately pursuing software development. I specialize in full-stack technologies including HTML, CSS, Bootstrap, JavaScript, Python, MySQL, Django, and data analysis with NumPy and Pandas. Then i Did Lots of Projects!! Checkit Out <a href="https://github.com/devsivasankar?tab=repositories"><i class="fa-brands fa-github"></i></a> on Here.</p>
 
                         <div class="myimages">
                             <img src="/static/images/myimage1 copy.jpeg" alt="" width="200px" height="200px">
@@ -135,9 +137,21 @@
                     <h1 class="footerheading">Get in Touch</h1>
                     <p class="footerdesc text-secondary">Feel Free to Reach Out! Send Me a Direct Message With a Clear Questions.and I’ll get back to you as soon as possible</p>
                     <div class="footerlink">
-                        <img src="/static/images/whatsappcopy.png" alt="whatsapp" width="200px" height="200px">
-                        <img src="/static/images/linkedincopy.png" alt="linkedin" width="200px" height="200px">
-                        <img src="/static/images/mailcopy.png" alt="mail" width="200px" height="200px">
+                        <a href="https://wa.me/7845529705" target="_blank">
+                            <img src="{% static 'images/whatsappcopy.png' %}" alt="whatsapp" width="200" height="200">
+                        </a>
+                    
+                        <a href="https://www.linkedin.com/in/siva-sankar-sk/" target="_blank">
+                            <img src="{% static 'images/linkedincopy.png' %}" alt="linkedin" width="200" height="200">
+                        </a>
+                    
+                        <a href="mailto:mypostbox.sivasankar@gmail.com">
+                            <img src="{% static 'images/mailcopy.png' %}" alt="mail" width="200" height="200">
+                        </a>
+                    
+                        <a href="https://www.instagram.com/_sk.ig/" target="_blank">
+                            <img src="{% static 'images/instagram.png' %}" alt="instagram" width="200" height="200">
+                        </a>
                     </div>
             </div>
         </div>
@@ -153,7 +167,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 </body>

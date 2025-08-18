@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: #6c757d;
+            margin-bottom: 1rem;
+            position: relative;
+            animation: bounce 2s infinite alternate;
+        }
+        
+        .error-code span {
+            display: inline-block;
+        }
+        
+        .error-code span:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        
+        .error-code span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .error-code span:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #343a40;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #6c757d;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            background-color: #0069d9;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .ghost {
+            position: absolute;
+            width: 100px;
+            height: 120px;
+            background-color: #f8f9fa;
+            border-radius: 50% 50% 0 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        
+        .ghost::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            top: 65px;
+            left: 15px;
+            box-shadow: 30px 0 0 #f8f9fa, 60px 0 0 #f8f9fa;
+        }
+        
+        .ghost::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            background-color: #f8f9fa;
+            top: 85px;
+            left: 0;
+            border-radius: 0 0 50% 50%;
+            box-shadow: 20px 0 0 0 #f8f9fa, 40px 0 0 0 #f8f9fa, 60px 0 0 0 #f8f9fa, 80px 0 0 0 #f8f9fa;
+        }
+        
+        .ghost:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            transform: scale(0.6);
+            animation-delay: 0s;
+        }
+        
+        .ghost:nth-child(2) {
+            top: 20%;
+            right: 10%;
+            transform: scale(0.8);
+            animation-delay: 1s;
+        }
+        
+        .ghost:nth-child(3) {
+            bottom: 10%;
+            left: 15%;
+            transform: scale(0.5);
+            animation-delay: 2s;
+        }
+        
+        .ghost:nth-child(4) {
+            bottom: 15%;
+            right: 10%;
+            transform: scale(0.7);
+            animation-delay: 3s;
+        }
+        
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .ghost {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ghost"></div>
+    <div class="ghost"></div>
+    <div class="ghost"></div>
+    <div class="ghost"></div>
+    
+    <div class="container">
+        <div class="error-code">
+            <span>4</span>
+            <span>0</span>
+            <span>4</span>
+        </div>
+        <h1>Oops! Page Not Found</h1>
+        <p>The page you're looking for doesn't exist or has been moved.</p>
+        <a href="/" class="btn">Go Back Home</a>
+    </div>
+</body>
+</html>
