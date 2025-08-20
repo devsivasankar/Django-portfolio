@@ -1,3 +1,10 @@
+// aos library
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init();
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.createElement('div');
     modal.className = 'social-modal';

@@ -17,18 +17,22 @@
     <!-- favicon -->
     <!-- aclonica  -->
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <!-- aos animation -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- aos animation -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 {% for p in profile %}
                     <!-- Cover Image Section -->
-                    <div class="cover-container">
+                    <div class="cover-container" data-aos="zoom-in">
                         <img src="{{ p.cover.url }}" alt="Cover Image" class="cover-image">
                     </div>
                     
-                    <div class="container">
+                    <div class="container" data-aos="fade-right">
                         <div class="row">
                             <!-- Profile Image Section (Left Side) -->
                             <div class="col-md-2 profile-container">
@@ -41,7 +45,7 @@
         </div>
 
         <!-- summery section  -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" data-aos="fade-up">
             <div class="col-lg-8">
                 <h1 class="name">Sivasankar</h1>
                 <h6 class="proffesion">Full-Stack Web Developer</h6>
@@ -65,17 +69,17 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <h1 class="about-heading mb-4 pb-2">About Me.</h1>
-                        <p class="about-desc mb-5">My Name is Sivasankar, a former Junior Engineer in Automobile Industry with 6 years of experience, now passionately pursuing software development. I specialize in full-stack technologies including HTML, CSS, Bootstrap, JavaScript, Python, MySQL, Django, and data analysis with NumPy and Pandas. Then i Did Lots of Projects!! Checkit Out <a href="https://github.com/devsivasankar?tab=repositories"><i class="fa-brands fa-github"></i></a> on Here.</p>
+                        <h1 class="about-heading mb-4 pb-2" data-aos="fade-up">About Me.</h1>
+                        <p class="about-desc mb-5" data-aos="fade-up">My Name is Sivasankar, a former Junior Engineer in Automobile Industry with 6 years of experience, now passionately pursuing software development. I specialize in full-stack technologies including HTML, CSS, Bootstrap, JavaScript, Python, MySQL, Django, and data analysis with NumPy and Pandas. Then i Did Lots of Projects!! Checkit Out <a href="https://github.com/devsivasankar?tab=repositories"><i class="fa-brands fa-github"></i></a> on Here.</p>
 
                         <div class="myimages">
-                            <img src="/static/images/myimage1 copy.jpeg" alt="" width="200px" height="200px">
-                            <img src="/static/images/myimage2 copy.jpeg" alt="" width="200px" height="200px">
-                            <img src="/static/images/myimage4 copy.jpeg" alt="" width="200px" height="200px">
-                            <img src="/static/images/myimage5 copy.jpg" alt="" width="200px" height="200px">
+                            <img src="/static/images/myimage1 copy.jpeg" alt="" width="200px" height="200px" data-aos="fade-right">
+                            <img src="/static/images/myimage2 copy.jpeg" alt="" width="200px" height="200px" data-aos="fade-left">
+                            <img src="/static/images/myimage4 copy.jpeg" alt="" width="200px" height="200px" data-aos="fade-right">
+                            <img src="/static/images/myimage5 copy.jpg" alt="" width="200px" height="200px" data-aos="fade-left">
                         </div>
 
-                        <div class="info-card mb-4 p-4 rounded">
+                        <div class="info-card mb-4 p-4 rounded" data-aos="fade-up">
                             <h3 class="info-title mb-3"><i class="fa-solid fa-user-graduate me-2"></i>Education</h3>
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="info-text mb-0">Diploma in Mechanical Engineering</p>
@@ -83,7 +87,7 @@
                             </div>
                         </div>
 
-                        <div class="info-card p-4 rounded">
+                        <div class="info-card p-4 rounded" data-aos="fade-up">
                             <h3 class="info-title mb-3"><i class="fa-solid fa-language me-2"></i>Language Known</h3>
                             <p class="info-text mb-0">Tamil | English | Kannada</p>
                         </div>
@@ -93,16 +97,16 @@
         </section>
 
         <!-- skill section -->
-        <div class="row justify-content-center py-3">
+        <div class="row justify-content-center py-3" data-aos="fade-up">
             <div class="col-lg-8">
                 <h1 class="skills-title">Tech Stack.</h1>
                 <div class="skills-grid">
                     {% for skill in skills %}
                     <div class="skill-card">
                         <div class="skill-icon">
-                            <img src="{{ skill.image.url }}" alt="{{ skill.skill }}">
+                            <img src="{{ skill.image.url }}" alt="{{ skill.skill }}" data-aos="fade-up">
                         </div>
-                        <div class="skill-name">{{ skill.skill }}</div>
+                        <div class="skill-name" data-aos="fade-up">{{ skill.skill }}</div>
                     </div>
                     {% endfor %}
                 </div>
@@ -112,11 +116,11 @@
         <!-- project section -->
         <div class="row justify-content-center py-3">
             <div class="col-lg-8">
-                <h1 class="project-head py-2">Projects.</h1>            
+                <h1 class="project-head py-2" data-aos="fade-up">Projects.</h1>            
                 <!-- Project Cards -->
                 <div class="row g-4">
                     {% for project in projects %}
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6" data-aos="fade-up">
                             <div class="card shadow-sm">
                                 <img src="{{ project.project_image.url }}" class="card-img-top" alt="Project 1">
                                 <div class="card-body">
@@ -126,12 +130,12 @@
                             </div>
                         </div>
                     {% endfor %}
-                    <a href="{% url 'projects' %}" class="show-more text-center">Show More <i class="fa-solid fa-caret-right"></i></a>
+                    <a href="{% url 'projects' %}" class="show-more text-center" data-aos="fade-up">Show More <i class="fa-solid fa-caret-right"></i></a>
                 </div>
             </div>
         </div>
 
-        <!-- fooder section -->
+        <!-- footer section -->
         <div class="row justify-content-center py-5">
             <div class="col-lg-12">
                     <h1 class="footerheading">Get in Touch</h1>
