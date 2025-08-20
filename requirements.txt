@@ -2,3 +2,5 @@ django
 mysqlclient
 pillow
 django-bootstrap5
+gunicorn
+whitenoise
