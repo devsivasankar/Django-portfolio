@@ -79,6 +79,7 @@ WSGI_APPLICATION = "my_project.wsgi.application"
 
 
 
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -89,16 +90,24 @@ if os.environ.get("DATABASE_URL"):
     }
 else:
     # Use local MySQL for development
+    # DATABASES = {
+    #     "default": {
+    #         "ENGINE": "django.db.backends.mysql",
+    #         "NAME": "portfolio_db",
+    #         "USER": "root",
+    #         "PASSWORD": "rootpass",
+    #         "HOST": "localhost",
+    #         "PORT": "3306",
+    #     }
+    # }
+
     DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.mysql",
-            "NAME": "portfolio_db",
-            "USER": "root",
-            "PASSWORD": "rootpass",
-            "HOST": "localhost",
-            "PORT": "3306",
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / "db.sqlite3",  # path to new SQLite file
         }
     }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
